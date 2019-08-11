@@ -45,7 +45,6 @@ struct Power : public IPower {
     Return<void> setFeature(Feature feature, bool activate) override;
     Return<void> getPlatformLowPowerStats(getPlatformLowPowerStats_cb _hidl_cb) override;
 
-
     // Methods from ::android::hidl::base::V1_0::IBase follow.
 
 };

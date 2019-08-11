@@ -128,7 +128,6 @@ done:
     return Void();
 }
 
-
 }  // namespace implementation
 }  // namespace V1_0
 }  // namespace power
