@@ -603,20 +603,20 @@ service vendor.start_hci_filter /system/vendor/bin/wcnss_filter
 service vendor.bt-dun /system/bin/dun-server /dev/smd7 /dev/rfcomm0
     class late_start
     user bluetooth
-    group bluetooth net_bt_admin inet
+    group bluetooth bluetooth inet
     disabled
     oneshot
 
 service vendor.btsnoop /system/bin/btsnoop
    user bluetooth
-   group bluetooth net_bt_admin sdcard_rw sdcard_r media_rw
+   group bluetooth bluetooth sdcard_rw sdcard_r media_rw
    class late_start
    disabled
    oneshot
 
 service vendor.bt_logger /system/bin/bt_logger
    user bluetooth
-   group bluetooth net_bt_admin sdcard_rw sdcard_r media_rw
+   group bluetooth bluetooth sdcard_rw sdcard_r media_rw
    class late_start
    disabled
    oneshot
@@ -624,7 +624,7 @@ service vendor.bt_logger /system/bin/bt_logger
 service ftmd /system/bin/logwrapper /system/bin/ftmdaemon
     class late_start
     user root
-    group bluetooth net_bt_admin misc net_bt_stack diag net_bt
+    group bluetooth bluetooth misc bluetooth diag net_bt
     disabled
     oneshot
 
@@ -960,7 +960,7 @@ service vendor.wigig_hostapd /vendor/bin/hw/hostapd -dd  -j wigighostapd /data/v
 
 service ims_regmanager /system/vendor/bin/exe-ims-regmanagerprocessnative
     class late_start
-    group net_bt_admin inet radio wifi
+    group bluetooth inet radio wifi
     disabled
 
 on property:persist.ims.regmanager.mode=1
@@ -1193,7 +1193,7 @@ service vendor.audio-hal-2-0 /vendor/bin/hw/android.hardware.audio@2.0-service
     class hal
     user audioserver
     # media gid needed for /dev/fm (radio) and for /data/misc/media (tee)
-    group audio camera drmrpc inet media mediadrm net_bt net_bt_admin net_bw_acct oem_2901 wakelock
+    group audio camera drmrpc inet media mediadrm net_bt bluetooth net_bw_acct oem_2901 wakelock
     capabilities BLOCK_SUSPEND
     ioprio rt 4
     writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks
