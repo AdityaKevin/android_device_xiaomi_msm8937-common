@@ -31,6 +31,7 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_EXFAT_DRIVER		:= sdfat
 #TARGET_KERNEL_CLANG_COMPILE := true
 #TARGET_KERNEL_CLANG_VERSION := 9.0.5
+TARGET_KERNEL_VERSION 		:= 3.18
 
 # Use 'android' instead of 'androidkernel'
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
