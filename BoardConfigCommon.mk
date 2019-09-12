@@ -227,10 +227,6 @@ SELINUX_IGNORE_NEVERALLOWS := true
 BOARD_VNDK_RUNTIME_DISABLE := true
 BOARD_VNDK_VERSION := current
 
-PRODUCT_PACKAGES += \
-    vndk_package \
-    libstdc++.vendor
-
 # Wi-Fi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_WLAN_DEVICE := qcwcn
