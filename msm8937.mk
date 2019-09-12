@@ -314,8 +314,9 @@ PRODUCT_BOOT_JARS += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.0-service.custom \
-    power.msm8937
+    android.hardware.power@1.0-impl \
+    android.hardware.power@1.0-service \
+    power.qcom
 
 # RCS
 PRODUCT_PACKAGES += \
