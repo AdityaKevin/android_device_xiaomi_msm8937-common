@@ -33,6 +33,9 @@ TARGET_EXFAT_DRIVER		:= sdfat
 #TARGET_KERNEL_CLANG_VERSION := 9.0.5
 TARGET_KERNEL_VERSION 		:= 3.18
 
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_PHONY_TARGETS := true
+
 # Use 'android' instead of 'androidkernel'
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
