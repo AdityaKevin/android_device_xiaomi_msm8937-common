@@ -1,4 +1,5 @@
 # Audio
+PRODUCT_PROPERTY_OVERRIDES += \
 vendor.voice.playback.conc.disabled=true
 vendor.voice.record.conc.disabled=false
 vendor.voice.voip.conc.disabled=true
@@ -36,11 +37,13 @@ ro.config.vc_call_vol_steps=8
 ro.config.media_vol_steps=20
 
 # Bluetooth
+PRODUCT_PROPERTY_OVERRIDES += \
 persist.vendor.bluetooth.modem_nv_support=true
 persist.vendor.bt.enable.splita2dp=false
 vendor.qcom.bluetooth.soc=smd
 
 # Camera
+PRODUCT_PROPERTY_OVERRIDES += \
 vendor.camera.hal1.packagelist=com.skype.raider,com.google.android.talk
 persist.vendor.camera.display.umax=2560x1440
 persist.vendor.camera.display.lmax=1280x720
@@ -50,9 +53,11 @@ persist.ts.postmakeup=true
 persist.ts.rtmakeup=true
 
 # CNE/DPM
+PRODUCT_PROPERTY_OVERRIDES += \
 persist.vendor.cne.feature=1
 
 # Display
+PRODUCT_PROPERTY_OVERRIDES += \
 ro.opengles.version=196610
 ro.sf.lcd_density=300
 debug.sf.enable_hwc_vds=1
@@ -73,18 +78,23 @@ persist.hwc.enable_vds=1
 debug.sdm.support_writeback=0
 
 # DRM
+PRODUCT_PROPERTY_OVERRIDES += \
 drm.service.enabled=true
 
 # Fingerprint
+PRODUCT_PROPERTY_OVERRIDES += \
 persist.qfp=false
 
 # FM
+PRODUCT_PROPERTY_OVERRIDES += \
 ro.fm.transmitter=false
 
 # FRP
+PRODUCT_PROPERTY_OVERRIDES += \
 ro.frp.pst=/dev/block/bootdevice/by-name/config
 
 # GPS
+PRODUCT_PROPERTY_OVERRIDES += \
 persist.gps.qc_nlp_in_use=1
 persist.loc.nlp_name=com.qualcomm.location
 ro.gps.agps_provider=1
@@ -105,13 +115,16 @@ ro.location.osnlp.package=com.google.android.gms
 ro.location.osnlp.region.package=
 
 # Shutdown timeout
+PRODUCT_PROPERTY_OVERRIDES += \
 sys.vendor.shutdown.waittime=500
 ro.build.shutdown_timeout=0
 
 # SdcardFs
+PRODUCT_PROPERTY_OVERRIDES += \
 ro.sys.sdcardfs=true
 
 # Media
+PRODUCT_PROPERTY_OVERRIDES += \
 media.msm8956hw=0
 mm.enable.smoothstreaming=true
 mmp.enable.3g2=true
@@ -122,11 +135,13 @@ vendor.vidc.disable.split.mode=1
 vendor.video.disable.ubwc=1
 
 #netmgrd
+PRODUCT_PROPERTY_OVERRIDES += \
 ro.vendor.use_data_netmgrd=true
 persist.data.netmgrd.qos.enable=true
 persist.vendor.data.mode=concurrent
 
 # Perf
+PRODUCT_PROPERTY_OVERRIDES += \
 ro.vendor.qti.am.reschedule_service=true
 ro.vendor.qti.core_ctl_min_cpu=2
 ro.vendor.qti.core_ctl_max_cpu=4
@@ -135,6 +150,7 @@ ro.vendor.extension_library=libqti-perfd-client.so
 ro.vendor.gt_library=libqti-gt.so
 
 # Perf configuration
+PRODUCT_PROPERTY_OVERRIDES += \
 ro.vendor.qti.sys.fw.bservice_enable=true
 ro.vendor.qti.sys.fw.bservice_limit=5
 ro.vendor.qti.sys.fw.bservice_age=5000
@@ -145,9 +161,11 @@ ro.vendor.qti.sys.fw.trim_cache_percent=100
 ro.vendor.qti.sys.fw.trim_enable_memory=2147483648
 
 #system props for time-services
+PRODUCT_PROPERTY_OVERRIDES += \
 persist.timed.enable=true
 
 # IMS
+PRODUCT_PROPERTY_OVERRIDES += \
 service.qti.ims.enabled=1
 persist.radio.ims.cmcc=true
 persist.radio.calls.on.ims=true
@@ -163,6 +181,7 @@ persist.data.iwlan.enable=true
 persist.vendor.qti.telephony.vt_cam_interface=1
 
 # RIL
+PRODUCT_PROPERTY_OVERRIDES += \
 DEVICE_PROVISIONED=1
 ro.telephony.call_ring.multiple=false
 ro.telephony.default_network=20,20
